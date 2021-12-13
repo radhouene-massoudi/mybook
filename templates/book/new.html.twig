@@ -1,0 +1,16 @@
+{% use "bootstrap_4_layout.html.twig" %}
+{%extends 'client_layout.html.twig'%}
+{%block title%} add new book {% endblock %}
+{% block gallery %}
+        <div class="card bg-secondary shadow">
+        <div class="card-header bg-white border-1">
+            <div class="row align-items-center">
+                <div class="col-8">
+                    <h3 class="mb-0">{{ 'Create New Book'|trans }}</h3>
+                </div>
+            </div>
+        </div>
+        {{form_start(form)}}
+          {{form_end(form)}}
+    </div>
+{% endblock %}

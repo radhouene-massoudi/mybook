@@ -1,0 +1,9 @@
+{% use "bootstrap_4_layout.html.twig" %}
+{%extends 'client_layout.html.twig'%}
+{%block title%} acces denied {% endblock %}
+{% block gallery %}
+<h1>You don't have  access to this page</h1>
+<br>
+<br>
+ <h1>your role is {{app.user.roles[0] }}</h1>
+{% endblock %}

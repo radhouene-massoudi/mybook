@@ -1,0 +1,21 @@
+{% use "bootstrap_4_layout.html.twig" %}
+{% extends 'client_layout.html.twig' %}
+
+{% block title %}Book index{% endblock %}
+
+{%block gallery%}
+{% for book in books %}
+<article class="col-lg-3 col-md-4 col-sm-6 col-12 tm-gallery-item">
+						<figure>
+							<img src="{{asset('image/books/')}}{{ book.image }}" alt="Image" class="img-fluid tm-gallery-img" />
+							<figcaption>
+								<h4 class="tm-gallery-title">{{ book.title }}</h4>
+								<p class="tm-gallery-description">{{ book.description }}</p>
+								<p class="tm-gallery-price">{{ book.section }}</p>
+                                <a href="{{ path('book_show', {'id': book.id}) }}">show</a>
+                   <a  href="{{ asset('image/books/') }}{{ book.cover }}">{{ book.cover  }}</a>
+							</figcaption>
+						</figure>
+					</article>
+{%endfor%}
+{%endblock%}
